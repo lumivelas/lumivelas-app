@@ -3,6 +3,7 @@ import { useFonts } from "expo-font";
 
 import "../global.css";
 import { useEffect } from "react";
+import { View } from "react-native";
 
 export default function RootLayout() {
   const [fontsLoaded, error] = useFonts({
@@ -18,5 +19,7 @@ export default function RootLayout() {
 
   if (!fontsLoaded && !error) return null;
 
-  return <Stack />;
+  return <Stack>
+    <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+  </Stack>
 }
