@@ -1,11 +1,10 @@
-import { Button } from "@mui/material";
+import LumiButton from "@/components/LumiButton";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <span>Teste</span>
-      <Button variant="contained">Contained</Button>
+      <LumiButton title={"Teste"}></LumiButton>
     </div>
   );
 }
