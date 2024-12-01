@@ -1,15 +1,17 @@
 'use client';
 
 import { Button, ButtonProps } from '@mui/material';
+import { on } from 'events';
 import React from 'react';
 
 interface Props extends ButtonProps {
   title: string;
 }
 
-const LumiButton: React.FC<Props> = ({ title, color = "primary" }) => {
+const LumiButton: React.FC<Props> = ({ title, color = "primary", ...props }) => {
   return (
     <Button
+      {...props}
       sx={{
         textTransform: "none",
         fontWeight: "bold",

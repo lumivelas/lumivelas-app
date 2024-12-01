@@ -5,7 +5,7 @@ import { ThemeProvider } from '@emotion/react';
 import { Inter } from 'next/font/google';
 import theme from '@/libs/theme';
 import "./globals.css";
-import NavBar from '@/components/NavBar';
+import NavBar from '@/components/nav/NavBar';
 
 const inter = Inter({
   weight: ["100", "400", "700"],
