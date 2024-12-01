@@ -1,7 +1,8 @@
-import React, { ReactNode } from 'react'
 import PersonIcon from '@mui/icons-material/Person';
-import Link from 'next/link';
+import routes from '@/constants/nav/routes';
+import React, { ReactNode } from 'react'
 import NavDrawer from './NavDrawer';
+import Link from 'next/link';
 import Logo from './Logo';
 
 interface Props {
@@ -15,8 +16,12 @@ const NavBar : React.FC<Props> = ({ children }) => {
           <Logo />
           
           <div className='hidden md:flex w-full justify-end items-center text-sm font-bold'>
-            <Link className='mx-5' href={'/'}>Home</Link>
-            <Link className='mx-5' href={'carrinho'}>Velas</Link>
+            {
+              routes.map((route) => (
+                <Link key={route.location} className='mx-5' href={route.location}>{route.title}</Link>    
+              ))
+            }
+            
             <div className='mx-5'>
               <PersonIcon />
             </div>

@@ -25,7 +25,7 @@ const NavDrawer: React.FC<Props> = ({ className }) => {
       <Drawer anchor='right' open={open} onClose={() => toggleDrawer(false)}>
         <Logo className='p-4' />
         <Divider />
-        <NavDrawerItems locations={[ { href: '/', title: 'Home' }, { href: 'carrinho', title: 'Carrinho' } ]} onClickItem={onClickItem} />
+        <NavDrawerItems onClickItem={onClickItem} />
       </Drawer>
     </menu>
   );
