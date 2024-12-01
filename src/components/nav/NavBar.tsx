@@ -4,6 +4,8 @@ import React, { ReactNode } from 'react'
 import NavDrawer from './NavDrawer';
 import Link from 'next/link';
 import Logo from './Logo';
+import { Avatar } from '@mui/material';
+import LumiButton from '../LumiButton';
 
 interface Props {
   children: ReactNode;
@@ -23,7 +25,12 @@ const NavBar : React.FC<Props> = ({ children }) => {
             }
             
             <div className='mx-5'>
-              <PersonIcon />
+              <span className='mx-2'>
+                <LumiButton title='Entrar' variant='text' />
+              </span>
+              <span className='mx-2'>
+                <LumiButton title='Registrar-se' variant='outlined' />
+              </span>
             </div>
           </div>
 
