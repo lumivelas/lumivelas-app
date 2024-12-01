@@ -21,8 +21,8 @@ const LumiButton: React.FC<Props> = ({ title, color = "primary", ...props }) => 
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
         },
       }}
-      color={color}
-      variant="outlined"
+      color='primary'
+      variant="contained"
     >
       {title}
     </Button>

@@ -3,13 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --black: #1A1A1A;
-  --white: #EAE4D3;
-  --white-opacity: rgba(234, 228, 211, 0.95);
-
-  --danger: #B35442;
-  --primary: #5A7D3A;
-  --secundary: #C27A4A;
+  --black: #212121;
+  --white: #FFFFFF;
+  --white-opacity: rgba(255, 255, 255, 0.95);
 
   --background: var(--white);
   --foreground: var(--black);

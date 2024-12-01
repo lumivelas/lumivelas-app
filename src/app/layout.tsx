@@ -2,10 +2,10 @@
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { ThemeProvider } from '@emotion/react';
+import NavBar from '@/components/nav/NavBar';
 import { Inter } from 'next/font/google';
 import theme from '@/libs/theme';
 import "./globals.css";
-import NavBar from '@/components/nav/NavBar';
 
 const inter = Inter({
   weight: ["100", "400", "700"],

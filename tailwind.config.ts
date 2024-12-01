@@ -8,10 +8,6 @@ export default {
   ],
   theme: {
     colors: {
-      white: 'var(--white)',
-      danger: 'var(--danger)',
-      primary: 'var(--primary)',
-      secundary: 'var(--secundary)',
       whiteOpacity: 'var(--white-opacity)',
     },
     extend: {
