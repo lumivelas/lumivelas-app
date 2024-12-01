@@ -1,6 +1,6 @@
 import { Box, List, ListItem, ListItemButton } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 interface Location {
     href: string;
@@ -9,9 +9,10 @@ interface Location {
 
 interface Props {
   locations: Location[];
+  afterClickItem: Function;
 }
 
-const NavDrawerItems: React.FC<Props> = ({ locations }) => {
+const NavDrawerItems: React.FC<Props> = ({ locations, afterClickItem }) => {
   return (
     <Box sx={{ width: 250 }} role="presentation">
         <List>
@@ -19,7 +20,7 @@ const NavDrawerItems: React.FC<Props> = ({ locations }) => {
                 locations.map((location, index) => (
                     <ListItem key={location.title} disablePadding>
                         <ListItemButton>
-                            <Link href={location.href}>
+                            <Link href={location.href} onClick={() => afterClickItem()}>
                                 { location.title }
                             </Link>
                         </ListItemButton>
