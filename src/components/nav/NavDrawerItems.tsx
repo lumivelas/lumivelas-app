@@ -11,7 +11,7 @@ interface Props {
   locations: Location[];
 }
 
-const DrawerList: React.FC<Props> = ({ locations }) => {
+const NavDrawerItems: React.FC<Props> = ({ locations }) => {
   return (
     <Box sx={{ width: 250 }} role="presentation">
         <List>
@@ -31,4 +31,4 @@ const DrawerList: React.FC<Props> = ({ locations }) => {
   );
 };
 
-export default DrawerList;
+export default NavDrawerItems;

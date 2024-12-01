@@ -1,6 +1,6 @@
 import { Button, Drawer } from '@mui/material';
 import React, { useState } from 'react';
-import DrawerList from './NavDrawerItems';
+import NavDrawerItems from './NavDrawerItems';
 
 interface Props {
   className: string;
@@ -16,8 +16,8 @@ const NavDrawer: React.FC<Props> = ({ className }) => {
   return (
     <menu className={className}>
       <Button onClick={toggleDrawer(true)}>Open drawer</Button>
-      <Drawer open={open} onClose={toggleDrawer(false)}>
-        <DrawerList locations={[ { href: '/', title: 'Home' }, { href: 'carrinho', title: 'Carrinho' } ]} />
+      <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
+        <NavDrawerItems locations={[ { href: '/', title: 'Home' }, { href: 'carrinho', title: 'Carrinho' } ]} />
       </Drawer>
     </menu>
   );
