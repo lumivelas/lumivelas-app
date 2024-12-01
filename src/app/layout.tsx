@@ -5,6 +5,7 @@ import { ThemeProvider } from '@emotion/react';
 import { Inter } from 'next/font/google';
 import theme from '@/libs/theme';
 import "./globals.css";
+import NavBar from '@/components/NavBar';
 
 const inter = Inter({
   weight: ["100", "400", "700"],
@@ -17,7 +18,7 @@ export default function RootLayout({ children } : Readonly<{ children: React.Rea
       <body className={inter.className}>
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
-              { children }
+              <NavBar children={children} />
             </ThemeProvider>
           </AppRouterCacheProvider>
       </body>
