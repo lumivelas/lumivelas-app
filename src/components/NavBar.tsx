@@ -9,7 +9,7 @@ interface Props {
 const NavBar : React.FC<Props> = ({ children }) => {
   return (
     <>
-      <nav className='flex w-full bg-white bg-opacity-10 p-5 fixed top-0 left-0'>
+      <nav className='z-[1000] flex w-full bg-whiteOpacity p-5 fixed top-0 left-0 shadow-sm'>
           <div className='select-none text-xl'>
             <strong>Lumi</strong>Velas
           </div>
