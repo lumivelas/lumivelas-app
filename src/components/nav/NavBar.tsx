@@ -1,8 +1,7 @@
 import React, { ReactNode } from 'react'
 import PersonIcon from '@mui/icons-material/Person';
 import Link from 'next/link';
-import { Menu, MenuItem } from '@mui/material';
-import NavBarSandwich from './NavBarSandwich';
+import NavDrawer from './NavDrawer';
 
 interface Props {
   children: ReactNode;
@@ -24,7 +23,7 @@ const NavBar : React.FC<Props> = ({ children }) => {
             </div>
           </div>
 
-          <NavBarSandwich className='md:hidden flex w-full justify-end items-center' />
+          <NavDrawer className='md:hidden flex w-full justify-end items-center' />
       </nav>
 
       <main className='pt-[5rem]'>
