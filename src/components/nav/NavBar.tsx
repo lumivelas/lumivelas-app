@@ -37,7 +37,7 @@ const NavBar : React.FC<Props> = ({ children }) => {
           <NavDrawer className='md:hidden flex w-full justify-end items-center' />
       </nav>
 
-      <main className='pt-[5rem]'>
+      <main className='pt-[6rem]'>
         { children }
       </main>
     </>
