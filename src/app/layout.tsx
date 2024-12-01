@@ -2,18 +2,19 @@
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { ThemeProvider } from '@emotion/react';
-import { Poppins } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import theme from '@/libs/theme';
 import "./globals.css";
 
-const poppins = Poppins({
-  weight: "400",
-});
+const inter = Inter({
+  weight: ["100", "400", "700"],
+  subsets: ['latin'],
+})
 
 export default function RootLayout({ children } : Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={inter.className}>
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
               { children }

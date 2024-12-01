@@ -1,10 +1,9 @@
-import LumiButton from "@/components/LumiButton";
-import Image from "next/image";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
     <div>
-      <LumiButton title={"Login"}></LumiButton>
+      <NavBar></NavBar>
     </div>
   );
 }
