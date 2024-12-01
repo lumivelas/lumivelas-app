@@ -9,10 +9,10 @@ interface Location {
 
 interface Props {
   locations: Location[];
-  afterClickItem: Function;
+  onClickItem: Function;
 }
 
-const NavDrawerItems: React.FC<Props> = ({ locations, afterClickItem }) => {
+const NavDrawerItems: React.FC<Props> = ({ locations, onClickItem }) => {
   return (
     <Box sx={{ width: 250 }} role="presentation">
         <List>
@@ -20,7 +20,7 @@ const NavDrawerItems: React.FC<Props> = ({ locations, afterClickItem }) => {
                 locations.map((location, index) => (
                     <ListItem key={location.title} disablePadding>
                         <ListItemButton>
-                            <Link href={location.href} onClick={() => afterClickItem()}>
+                            <Link href={location.href} onClick={() => onClickItem()}>
                                 { location.title }
                             </Link>
                         </ListItemButton>
