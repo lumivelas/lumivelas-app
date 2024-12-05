@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import NavDrawerItems from './NavDrawerItems';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import Logo from './Logo';
+import LumiButton from '../LumiButton';
+import Profile from '../profile/profile';
 
 interface Props {
   className: string;
@@ -26,6 +28,10 @@ const NavDrawer: React.FC<Props> = ({ className }) => {
         <Logo className='p-4' />
         <Divider />
         <NavDrawerItems onClickItem={onClickItem} />
+
+        <div className='h-full flex items-end mb-5'>
+          <Profile />
+        </div>
       </Drawer>
     </menu>
   );

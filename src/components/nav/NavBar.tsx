@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Logo from './Logo';
 import { Avatar } from '@mui/material';
 import LumiButton from '../LumiButton';
+import Profile from '../profile/profile';
 
 interface Props {
   children: ReactNode;
@@ -16,22 +17,15 @@ const NavBar : React.FC<Props> = ({ children }) => {
     <>
       <nav className='z-[1000] flex items-center w-full bg-whiteOpacity p-5 fixed top-0 left-0 shadow-sm'>
           <Logo />
-          
+
           <div className='hidden md:flex w-full justify-end items-center text-sm font-bold'>
             {
               routes.map((route) => (
-                <Link key={route.location} className='mx-5' href={route.location}>{route.title}</Link>    
+                <Link key={route.location} className='mx-5' href={route.location}>{route.title}</Link>
               ))
             }
-            
-            <div className='mx-5'>
-              <span className='mx-2'>
-                <LumiButton title='Entrar' variant='text' />
-              </span>
-              <span className='mx-2'>
-                <LumiButton title='Registrar-se' variant='outlined' />
-              </span>
-            </div>
+
+            <Profile className='mx-5' />
           </div>
 
           <NavDrawer className='md:hidden flex w-full justify-end items-center' />

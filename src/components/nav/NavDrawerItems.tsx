@@ -19,7 +19,7 @@ const NavDrawerItems: React.FC<Props> = ({ onClickItem }) => {
                                     { route.title }
                                 </Link>
                             </ListItemButton>
-                        </ListItem>        
+                        </ListItem>
                     ))
                 }
             </List>
