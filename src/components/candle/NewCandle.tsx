@@ -16,6 +16,7 @@ const NewCandle: React.FC<Props> = ({ open, onClose }) => {
     return (
         <Dialog
             open={open}
+            fullWidth={true}
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
@@ -23,13 +24,13 @@ const NewCandle: React.FC<Props> = ({ open, onClose }) => {
             <DialogTitle id="alert-dialog-title">
                 Nova vela
             </DialogTitle>
-            <DialogContent>
+            <DialogContent className='flex flex-col justify-center'>
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
-                    <LumiSelect id='arroma' title='Arroma' options={[ { code: 10, display: "Citronela"}, { code: 20, display: "Madeira do oriente"} ]} />
+                    <LumiSelect id='arroma' title='Arroma' options={[ { code: "10", display: "Citronela"}, { code: "20", display: "Madeira do oriente"} ]} />
                 </FormControl>
 
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
-                    <LumiSelect id='adicional' title='Adicional' options={[ { code: 10, display: "Teste 1"} ]} />
+                    <LumiSelect id='adicional' title='Adicional' options={[ { code: "10", display: "Teste 1"} ]} />
                 </FormControl>
             </DialogContent>
             <DialogActions>
