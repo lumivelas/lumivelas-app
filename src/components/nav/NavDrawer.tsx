@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import NavDrawerItems from './NavDrawerItems';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import Logo from './Logo';
-import LumiButton from '../LumiButton';
+import LumiButton from '../forms/LumiButton';
 import Profile from '../profile/profile';
 
 interface Props {

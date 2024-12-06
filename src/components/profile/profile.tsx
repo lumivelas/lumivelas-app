@@ -2,7 +2,7 @@ import { Box, List, ListItem, ListItemButton } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
 import routes from '@/constants/nav/routes';
-import LumiButton from '../LumiButton';
+import LumiButton from '../forms/LumiButton';
 
 interface Props {
     className?: string

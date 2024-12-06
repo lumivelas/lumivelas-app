@@ -5,7 +5,7 @@ import NavDrawer from './NavDrawer';
 import Link from 'next/link';
 import Logo from './Logo';
 import { Avatar } from '@mui/material';
-import LumiButton from '../LumiButton';
+import LumiButton from '../forms/LumiButton';
 import Profile from '../profile/profile';
 
 interface Props {
